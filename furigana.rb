@@ -3,14 +3,11 @@
 
 require "rubygems"
 require "net/http"
-require "uri"
 require "nokogiri"
-require "json"
 
 class Furigana
   def initialize(sentence=nil, grade=nil)
     @sentence = sentence
-    @sentence = URI.escape("魑魅魍魎") unless sentence
     @app_id = "UiepUEKxg666SAyFxsBpxR_VE9A_qsPVG_yyUJ8R8RIBRhRt8nJ2buvmiEBiuP6sQoOQ6ks.DuPQozY-"
     @grade = grade
     @grade = "3" unless grade
@@ -24,11 +21,12 @@ class Furigana
           "/FuriganaService/V1/furigana",
           "appid=#{@app_id}&grade=#{@grade}&sentence=#{@sentence}"
         )
-        @xml = response.body
+        response
       }
     rescue Net::HTTPBadRequest
       return "HTTP Error"
     end
+    return response
   end
 
   def return_instance_var
@@ -40,9 +38,13 @@ class Furigana
   end
 
   def return_xml
+    get_furigana
     doc_xml = Nokogiri::XML(@xml)
-    doc_xml.css('Word').each do |x|
-      p x.inner_html
+    words = doc_xml.css("Word")
+    words.each do |word|
+      unless word.css("Furigana").nil?
+        puts word
+      end
     end
   end
 end
@@ -58,5 +60,5 @@ str = <<EOD
 </html>
 EOD
 
-f = Furigana.new(str, 3)
-f.return_xml
+f = Furigana.new
+f.get_furigana.body
