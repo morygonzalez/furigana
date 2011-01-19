@@ -6,12 +6,10 @@ require "net/http"
 require "nokogiri"
 
 class Furigana
-  def initialize(sentence=nil, grade=nil)
-    @sentence = sentence
+  attr_writer :sentence, :grade
+
+  def initialize
     @app_id = "UiepUEKxg666SAyFxsBpxR_VE9A_qsPVG_yyUJ8R8RIBRhRt8nJ2buvmiEBiuP6sQoOQ6ks.DuPQozY-"
-    @grade = grade
-    @grade = "3" unless grade
-    @xml = ""
   end
 
   def get_furigana
@@ -21,31 +19,25 @@ class Furigana
           "/FuriganaService/V1/furigana",
           "appid=#{@app_id}&grade=#{@grade}&sentence=#{@sentence}"
         )
-        response
+        @response = response
       }
     rescue Net::HTTPBadRequest
       return "HTTP Error"
     end
-    return response
+    return @response unless @response.nil?
   end
 
-  def return_instance_var
-    instance_vars = {
-      "sentence" => @sentence,
-      "grade" => @grade,
-      "app_id" => @app_id
-    }
-  end
-
-  def return_xml
-    get_furigana
-    doc_xml = Nokogiri::XML(@xml)
+  def return_charactar_pair
+    xml = get_furigana.body
+    doc_xml = Nokogiri::XML(xml)
+    result = []
     words = doc_xml.css("Word")
     words.each do |word|
-      unless word.css("Furigana").nil?
-        puts word
-      end
+      phrase = Hash.new
+      phrase["#{word.css("Surface").text}"] = word.css("Furigana").text
+      result << phrase
     end
+    result
   end
 end
 
@@ -61,4 +53,12 @@ str = <<EOD
 EOD
 
 f = Furigana.new
-f.get_furigana.body
+f.grade = 3
+f.sentence = str
+f.return_charactar_pair.each do |r|
+  if r.values[0] != ""
+    puts "#{r.keys[0]}(#{r.values[0]})"
+  else
+    puts r.keys[0].class.name
+  end
+end
