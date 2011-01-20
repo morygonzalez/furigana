@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ResultSet xmlns="urn:yahoo:jp:jlp:FuriganaService" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:yahoo:jp:jlp:FuriganaService http://jlp.yahooapis.jp/FuriganaService/V1/furigana.xsd">
+  <Result>
+    <WordList>
+      <Word>
+        <Surface>&lt;</Surface>
+      </Word>
+      <Word>
+        <Surface>html</Surface>
+      </Word>
+      <Word>
+        <Surface>&gt;</Surface>
+      </Word>
+      <Word>
+        <Surface><![CDATA[
+]]></Surface>
+      </Word>
+      <Word>
+        <Surface><![CDATA[ ]]></Surface>
+      </Word>
+      <Word>
+        <Surface><![CDATA[ ]]></Surface>
+      </Word>
+      <Word>
+        <Surface>&lt;</Surface>
+      </Word>
+      <Word>
+        <Surface>head</Surface>
+      </Word>
+      <Word>
+        <Surface>&gt;</Surface>
+      </Word>
+      <Word>
+        <Surface><![CDATA[
+]]></Surface>
+      </Word>
+      <Word>
+        <Surface><![CDATA[ ]]></Surface>
+      </Word>
+      <Word>
+        <Surface><![CDATA[ ]]></Surface>
+      </Word>
+      <Word>
+        <Surface><![CDATA[ ]]></Surface>
+      </Word>
+      <Word>
+        <Surface><![CDATA[ ]]></Surface>
+      </Word>
+      <Word>
+        <Surface>&lt;</Surface>
+      </Word>
+      <Word>
+        <Surface>title</Surface>
+      </Word>
+      <Word>
+        <Surface>&gt;</Surface>
+      </Word>
+      <Word>
+        <Surface>ポケモン</Surface>
+      </Word>
+      <Word>
+        <Surface>だいすき</Surface>
+      </Word>
+      <Word>
+        <Surface>クラブ</Surface>
+      </Word>
+      <Word>
+        <Surface>&lt;</Surface>
+      </Word>
+      <Word>
+        <Surface>/</Surface>
+      </Word>
+      <Word>
+        <Surface>title</Surface>
+      </Word>
+      <Word>
+        <Surface>&gt;</Surface>
+      </Word>
+      <Word>
+        <Surface><![CDATA[
+]]></Surface>
+      </Word>
+      <Word>
+        <Surface><![CDATA[ ]]></Surface>
+      </Word>
+      <Word>
+        <Surface><![CDATA[ ]]></Surface>
+      </Word>
+      <Word>
+        <Surface>&lt;</Surface>
+      </Word>
+      <Word>
+        <Surface>/</Surface>
+      </Word>
+      <Word>
+        <Surface>head</Surface>
+      </Word>
+      <Word>
+        <Surface>&gt;</Surface>
+      </Word>
+      <Word>
+        <Surface><![CDATA[
+]]></Surface>
+      </Word>
+      <Word>
+        <Surface><![CDATA[ ]]></Surface>
+      </Word>
+      <Word>
+        <Surface><![CDATA[ ]]></Surface>
+      </Word>
+      <Word>
+        <Surface>&lt;</Surface>
+      </Word>
+      <Word>
+        <Surface>body</Surface>
+      </Word>
+      <Word>
+        <Surface>&gt;</Surface>
+      </Word>
+      <Word>
+        <Surface><![CDATA[
+]]></Surface>
+      </Word>
+      <Word>
+        <Surface><![CDATA[ ]]></Surface>
+      </Word>
+      <Word>
+        <Surface><![CDATA[ ]]></Surface>
+      </Word>
+      <Word>
+        <Surface><![CDATA[ ]]></Surface>
+      </Word>
+      <Word>
+        <Surface><![CDATA[ ]]></Surface>
+      </Word>
+      <Word>
+        <Surface>&lt;</Surface>
+      </Word>
+      <Word>
+        <Surface>p</Surface>
+      </Word>
+      <Word>
+        <Surface>&gt;</Surface>
+      </Word>
+      <Word>
+        <Surface>Pokemon</Surface>
+      </Word>
+      <Word>
+        <Surface>大好き</Surface>
+        <Furigana>だいすき</Furigana>
+        <Roman>daisuki</Roman>
+        <SubWordList>
+          <SubWord>
+            <Surface>大好</Surface>
+            <Furigana>だいす</Furigana>
+            <Roman>daisu</Roman>
+          </SubWord>
+          <SubWord>
+            <Surface>き</Surface>
+            <Furigana>き</Furigana>
+            <Roman>ki</Roman>
+          </SubWord>
+        </SubWordList>
+      </Word>
+      <Word>
+        <Surface>倶楽部</Surface>
+        <Furigana>くらぶ</Furigana>
+        <Roman>kurabu</Roman>
+      </Word>
+      <Word>
+        <Surface>&lt;</Surface>
+      </Word>
+      <Word>
+        <Surface>/</Surface>
+      </Word>
+      <Word>
+        <Surface>p</Surface>
+      </Word>
+      <Word>
+        <Surface>&gt;</Surface>
+      </Word>
+      <Word>
+        <Surface><![CDATA[
+]]></Surface>
+      </Word>
+      <Word>
+        <Surface><![CDATA[ ]]></Surface>
+      </Word>
+      <Word>
+        <Surface><![CDATA[ ]]></Surface>
+      </Word>
+      <Word>
+        <Surface>&lt;</Surface>
+      </Word>
+      <Word>
+        <Surface>/</Surface>
+      </Word>
+      <Word>
+        <Surface>body</Surface>
+      </Word>
+      <Word>
+        <Surface>&gt;</Surface>
+      </Word>
+      <Word>
+        <Surface><![CDATA[
+]]></Surface>
+      </Word>
+      <Word>
+        <Surface>&lt;</Surface>
+      </Word>
+      <Word>
+        <Surface>/</Surface>
+      </Word>
+      <Word>
+        <Surface>html</Surface>
+      </Word>
+      <Word>
+        <Surface>&gt;</Surface>
+      </Word>
+      <Word>
+        <Surface><![CDATA[
+]]></Surface>
+      </Word>
+    </WordList>
+  </Result>
+</ResultSet>
