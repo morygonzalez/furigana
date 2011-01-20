@@ -5,18 +5,18 @@ require "rubygems"
 require "net/http"
 require "nokogiri"
 
-class Furigana
+class Yomigana
   attr_writer :sentence, :grade
 
   def initialize
     @app_id = "UiepUEKxg666SAyFxsBpxR_VE9A_qsPVG_yyUJ8R8RIBRhRt8nJ2buvmiEBiuP6sQoOQ6ks.DuPQozY-"
   end
 
-  def get_furigana
+  def get_Yomigana
     begin
       Net::HTTP.start('jlp.yahooapis.jp', 80) { |http|
         response = http.post(
-          "/FuriganaService/V1/furigana",
+          "/YomiganaService/V1/Yomigana",
           "appid=#{@app_id}&grade=#{@grade}&sentence=#{@sentence}"
         )
         @response = response
@@ -28,13 +28,13 @@ class Furigana
   end
 
   def return_charactar_pair
-    xml = get_furigana.body
+    xml = get_Yomigana.body
     doc_xml = Nokogiri::XML(xml)
     result = []
     words = doc_xml.css("Word")
     words.each do |word|
       phrase = Hash.new
-      phrase["#{word.css("Surface").text}"] = word.css("Furigana").text
+      phrase["#{word.css("Surface").text}"] = word.css("Yomigana").text
       result << phrase
     end
     result
@@ -52,10 +52,10 @@ str = <<EOD
 </html>
 EOD
 
-f = Furigana.new
-f.grade = 3
-f.sentence = str
-f.return_charactar_pair.each do |r|
+y = Yomigana.new
+y.grade = 3
+y.sentence = str
+y.return_charactar_pair.each do |r|
   if r.values[0] != ""
     puts "#{r.keys[0]}(#{r.values[0]})"
   else
