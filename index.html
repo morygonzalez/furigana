@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/> 
+    <title>furigana</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("input#button").click(function() {
+          var postData = $("#text_input").val();
+          console.log(postData);
+          $.ajax({ 
+            type: "POST",
+            url: "furigana.rb",
+            contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+            data: { val: postData },
+            dataType: "json",
+            success: function(data, message) {
+              console.log(message);
+              $("#text_output").val(data.text_output);
+            }
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>よみがなツール</h1>
+    <form action="yomigana.rb" method="post">
+      <textarea id="text_input" name="text_input" cols="70" rows="10"></textarea>
+      <p><input type="submit" id="button" onclick="return false;"></p>
+    </form>
+    <textarea id="text_output" cols="70" rows="10"></textarea>
+  </body>
+</html>
