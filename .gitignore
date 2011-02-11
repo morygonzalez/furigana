@@ -1,2 +1,4 @@
 *.swp
+/fixtures/*
 /features/*
+*DS_Store
